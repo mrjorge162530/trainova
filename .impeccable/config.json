@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "pagina-ventas/styles.css"
+        ],
+        "createdAt": "2026-10-26T17:40:30.207Z",
+        "reason": "KOF arcade neon glow requested by the user for the premium sales page, matching the product's established aesthetic"
+      }
+    ]
+  }
+}

@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trainova · Rutinas que tus alumnos entienden sin preguntarte</title>
+<meta name="description" content="Plantillas dinámicas para entrenadores personales: 90 rutinas, 174 ejercicios animados con instrucciones de respiración, planes por cliente con tu marca y envío por WhatsApp.">
+<meta property="og:title" content="Trainova · Plantillas de entrenamiento para entrenadores">
+<meta property="og:description" content="Arma el plan de cada cliente en minutos, con tu marca, animaciones e instrucciones. Envíalo por WhatsApp.">
+<meta name="theme-color" content="#07070d">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%2307070d'/><text x='50%25' y='58%25' font-family='Impact,sans-serif' font-size='34' font-style='italic' fill='%23ffcc1a' text-anchor='middle' dominant-baseline='middle'>K</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Kaushan+Script&display=swap">
+<link rel="stylesheet" href="styles.css?v=20261026e">
+<script>
+  /* Activa animaciones de entrada; si main.js no arranca en 3 s, muestra todo sin animar */
+  document.documentElement.classList.add('js');
+  setTimeout(function(){ if(!window.__kofBoot){ document.documentElement.classList.remove('js'); var s=document.getElementById('splash'); if(s) s.style.display='none'; } }, 3000);
+</script>
+</head>
+<body>
+
+<!-- ========== INTRO ARCADE ========== -->
+<div class="splash" id="splash" aria-hidden="true">
+  <div class="splash-lines"></div>
+  <div class="splash-logo"><span>PLANTILLAS DINÁMICAS</span><b>TRAIN<i>OVA</i></b></div>
+  <div class="splash-ready">READY?</div>
+</div>
+
+<!-- ========== NAV ========== -->
+<header class="nav" id="nav">
+  <a class="nav-logo" href="#top" aria-label="Trainova, inicio">TRAIN<b>OVA</b></a>
+  <nav class="nav-links" aria-label="Secciones">
+    <a href="#demo">Demo</a>
+    <a href="#como">Cómo funciona</a>
+    <a href="#incluye">Qué incluye</a>
+    <a href="#faq">Preguntas</a>
+  </nav>
+  <a class="btn btn-gold btn-sm magnetic" href="#precio" data-checkout>Quiero acceder</a>
+</header>
+
+<main id="top">
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <canvas class="hero-lines" id="heroLines" aria-hidden="true"></canvas>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="tag">PARA ENTRENADORES PERSONALES</span></p>
+      <h1 class="hero-title">
+        <span class="line"><span>Rutinas que tus</span></span>
+        <span class="line"><span>alumnos <em>entienden</em></span></span>
+        <span class="line"><span>sin preguntarte.</span></span>
+      </h1>
+      <p class="hero-sub">Arma el plan de cada cliente en minutos, con tu marca, animaciones de cada ejercicio e instrucciones de respiración. Lo envías por WhatsApp y tu alumno lo sigue desde su celular, serie por serie.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold btn-lg magnetic" href="#precio" data-checkout>Quiero acceder <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost btn-lg" href="#demo">Probar la demo</a>
+      </div>
+      <ul class="hero-trust">
+        <li>Pago único</li><li>Acceso inmediato</li><li>Garantía de 7 días</li>
+      </ul>
+    </div>
+
+    <div class="hero-visual">
+      <div class="phone tilt" id="heroPhone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="ps-top"><span class="ps-logo">TU</span><div><b>TU MARCA</b><small>Entrenador: Tu nombre</small></div></div>
+          <div class="ps-hello"><small>PLAN DE ENTRENAMIENTO</small><b>Ana López</b></div>
+          <div class="ps-tabs"><span class="on">1 · Pecho A</span><span>2 · Glúteos A</span><span>3 · HIIT</span></div>
+          <div class="ps-card">
+            <div class="ps-gif"><span class="ps-num">01</span><img src="assets/img/press_banca.webp" alt="Animación: press de banca con barra" width="320" height="320"></div>
+            <b class="ps-name">PRESS DE BANCA</b>
+            <div class="ps-dose"><div><span>SERIES</span><b>4</b></div><div><span>REPS</span><b>8-10</b></div><div><span>DESCANSO</span><b>120s</b></div></div>
+            <div class="ps-sets" id="psSets"><i>1</i><i>2</i><i>3</i><i>4</i></div>
+            <div class="ps-how"><span class="k k-inh">INHALA</span><p>Al bajar la barra hacia el pecho.</p></div>
+            <div class="ps-how"><span class="k k-exh">EXHALA</span><p>Al empujar la barra hacia arriba.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="chip chip-1" data-depth="0.6"><b>✓</b> Serie 2 de 4 completada</div>
+      <div class="chip chip-2" data-depth="1"><span class="k k-ev">EVITA</span> rebotar la barra</div>
+      <div class="chip chip-3" data-depth="0.4">Tu logo · tu WhatsApp</div>
+    </div>
+  </div>
+
+  <div class="stats" aria-label="Contenido del sistema">
+    <div><b data-count="90">90</b><span>rutinas listas</span></div>
+    <div><b data-count="174">174</b><span>ejercicios animados</span></div>
+    <div><b data-count="10">10</b><span>grupos musculares</span></div>
+    <div><b data-count="3">3</b><span>niveles</span></div>
+  </div>
+</section>
+
+<!-- ========== TICKER ========== -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Press de banca</span><span>Hip thrust</span><span>Dominadas</span><span>Sentadilla búlgara</span><span>Face pull</span><span>Peso muerto rumano</span><span>Muscle up</span><span>Burpees</span><span>Plancha lateral</span><span>Remo en T</span><span>Curl martillo</span><span>Postura de la cobra</span>
+    <span>Press de banca</span><span>Hip thrust</span><span>Dominadas</span><span>Sentadilla búlgara</span><span>Face pull</span><span>Peso muerto rumano</span><span>Muscle up</span><span>Burpees</span><span>Plancha lateral</span><span>Remo en T</span><span>Curl martillo</span><span>Postura de la cobra</span>
+  </div>
+</div>
+
+<!-- ========== ANTES / DESPUÉS ========== -->
+<section class="versus section">
+  <div class="wrap">
+    <p class="kicker reveal">El problema</p>
+    <h2 class="h2 reveal">Del audio de WhatsApp<br>al plan <span class="hl">profesional</span>.</h2>
+    <p class="lead reveal">Cada duda que tu alumno te manda es tiempo tuyo y una serie mal hecha suya. Cuando la rutina explica el ejercicio, las preguntas desaparecen.</p>
+
+    <div class="vs-grid">
+      <article class="vs-card vs-before reveal">
+        <header><span class="vs-label">ANTES</span><b>Chat con tu alumno</b></header>
+        <div class="chat">
+          <p class="msg in">Coach, ¿eran 3 o 4 series? 😅</p>
+          <p class="msg in">¿El codo va pegado o abierto?</p>
+          <p class="msg out">Te mando audio…</p>
+          <p class="msg out voice"><span>▶</span><i></i> 2:41</p>
+          <p class="msg in">¿Hoy tocaba pierna o glúteo?</p>
+          <p class="msg in">No encuentro la foto que me pasaste 🙈</p>
+        </div>
+      </article>
+
+      <div class="vs-badge reveal" aria-hidden="true">VS</div>
+
+      <article class="vs-card vs-after reveal">
+        <header><span class="vs-label gold">CON TRAINOVA</span><b>Plan que se explica solo</b></header>
+        <div class="mini-card">
+          <div class="mini-gif"><img src="assets/img/hip_thrust.webp" alt="Animación: hip thrust con barra" loading="lazy" width="320" height="320"></div>
+          <div class="mini-info">
+            <b>HIP THRUST CON BARRA</b>
+            <small>Trabaja: glúteo mayor</small>
+            <div class="mini-dose"><span>4 series</span><span>10-12 reps</span><span>90s</span></div>
+          </div>
+        </div>
+        <ul class="mini-how">
+          <li><span class="k k-ini">INICIO</span>Espalda alta en el banco, barra sobre la cadera.</li>
+          <li><span class="k k-fin">FINAL</span>Cadera arriba formando una mesa, aprieta 1–2 s.</li>
+          <li><span class="k k-inh">INHALA</span>Al bajar.</li>
+          <li><span class="k k-exh">EXHALA</span>Al subir.</li>
+          <li><span class="k k-ev">EVITA</span>Arquear la espalda baja arriba.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DEMO INTERACTIVA ========== -->
+<section class="demo section" id="demo">
+  <div class="wrap">
+    <p class="kicker reveal">Demo en vivo</p>
+    <h2 class="h2 reveal">Elige nivel, grupo y <span class="hl">round</span>.</h2>
+    <p class="lead reveal">Estas son las rutinas reales del sistema. Toca un grupo como en una pantalla de selección y mira lo que recibe tu alumno.</p>
+
+    <div class="arcade reveal">
+      <div class="arcade-top">
+        <div class="lv" role="tablist" aria-label="Nivel" id="demoLevels">
+          <button class="on" data-lvl="basico">Básico</button>
+          <button data-lvl="intermedio">Intermedio</button>
+          <button data-lvl="avanzado">Avanzado</button>
+        </div>
+        <div class="rd" role="tablist" aria-label="Día" id="demoDays">
+          <button class="on" data-day="A">A</button><button data-day="B">B</button><button data-day="C">C</button>
+        </div>
+      </div>
+      <div class="roster" id="demoRoster" aria-label="Grupo muscular"></div>
+      <div class="arcade-body" id="demoBody">
+        <p class="noscript-note">Activa JavaScript para usar la demo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CÓMO FUNCIONA (sticky) ========== -->
+<section class="how section" id="como">
+  <div class="wrap">
+    <p class="kicker reveal">Cómo funciona</p>
+    <h2 class="h2 reveal">Tres pasos. <span class="hl">Un round</span> por cliente.</h2>
+  </div>
+  <div class="wrap how-grid">
+    <div class="how-steps">
+      <article class="step" data-step="1">
+        <span class="step-n">01</span>
+        <h3>Pon tu marca una sola vez</h3>
+        <p>Tu nombre, tu logo, tu WhatsApp e Instagram. Aparecen en cada rutina, en cada PDF y en cada plan que envías. Tu alumno ve tu marca, no una plantilla genérica.</p>
+      </article>
+      <article class="step" data-step="2">
+        <span class="step-n">02</span>
+        <h3>Arma el plan del cliente</h3>
+        <p>Elige nivel, grupo muscular y día entre 90 rutinas listas. Cambia un ejercicio tocando su nombre, ajusta series, repeticiones y descanso, y añádelo al plan de tu cliente.</p>
+      </article>
+      <article class="step" data-step="3">
+        <span class="step-n">03</span>
+        <h3>Envíalo por WhatsApp</h3>
+        <p>Un clic genera un archivo con todo el plan, sus animaciones e instrucciones. Tu alumno lo abre en el celular, sin instalar nada, y marca cada serie al terminarla.</p>
+      </article>
+    </div>
+    <div class="how-visual">
+      <div class="phone phone-sm" id="howPhone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="scr on" data-scr="1">
+            <div class="scr-title">★ MI MARCA</div>
+            <div class="scr-logo"><span>TU<br>LOGO</span></div>
+            <label class="scr-field"><span>Tu nombre</span><i>Coach Jorge</i></label>
+            <label class="scr-field"><span>Marca</span><i>JR Fitness</i></label>
+            <label class="scr-field"><span>WhatsApp</span><i>+52 55 1234 5678</i></label>
+            <div class="scr-btn">GUARDAR</div>
+          </div>
+          <div class="scr" data-scr="2">
+            <div class="scr-title">👥 PLAN DE ANA</div>
+            <div class="scr-row" style="--c:#ff7a1a"><b>1</b><span>Pecho A · Básico<small>4 ejercicios</small></span></div>
+            <div class="scr-row" style="--c:#ff2ea6"><b>2</b><span>Glúteos A · Básico<small>4 ejercicios</small></span></div>
+            <div class="scr-row" style="--c:#a24dff"><b>3</b><span>HIIT A · Intermedio<small>5 ejercicios</small></span></div>
+            <div class="scr-add">＋ Añadir rutina</div>
+            <div class="scr-btn">⬇ DESCARGAR PLAN</div>
+          </div>
+          <div class="scr scr-wa" data-scr="3">
+            <div class="wa-head"><span class="wa-av">A</span><div><b>Ana López</b><small>en línea</small></div></div>
+            <div class="wa-body">
+              <p class="wa-msg out">Ana, aquí está tu plan de la semana 💪</p>
+              <div class="wa-file out"><span class="wa-ic">HTML</span><div><b>Plan de entrenamiento - Ana López</b><small>2.8 MB · Documento</small></div></div>
+              <p class="wa-msg in">¡Qué bien se ve! Ya lo abrí 🙌</p>
+              <p class="wa-msg in">Y ya entendí cómo se hace el hip thrust</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="how-dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ANATOMÍA DE UN EJERCICIO ========== -->
+<section class="anatomy section">
+  <div class="wrap anatomy-grid">
+    <div>
+      <p class="kicker reveal">Cada ejercicio, explicado</p>
+      <h2 class="h2 reveal">Lo que dirías en el gym,<br><span class="hl">escrito y animado</span>.</h2>
+      <ol class="anat-list">
+        <li class="reveal"><span><b>Animación</b> del movimiento completo, en bucle.</span></li>
+        <li class="reveal"><span><b>Músculo exacto</b> que trabaja y los músculos de apoyo.</span></li>
+        <li class="reveal"><span><b>Inicio y final</b> del recorrido, para que no haga medias repeticiones.</span></li>
+        <li class="reveal"><span><b>Cuándo inhalar y exhalar</b>, en cada ejercicio.</span></li>
+        <li class="reveal"><span><b>Qué evitar</b>: los errores que causan lesiones.</span></li>
+      </ol>
+    </div>
+    <article class="anat-card tilt reveal">
+      <span class="pin p1">1</span><span class="pin p2">2</span><span class="pin p3">3</span><span class="pin p4">4</span><span class="pin p5">5</span>
+      <div class="ac-top">
+        <div class="ac-gif"><img src="assets/img/dominadas.webp" alt="Animación: dominadas pronas" loading="lazy" width="320" height="320"></div>
+        <div class="ac-info">
+          <b class="ac-name">DOMINADAS PRONAS</b>
+          <p class="ac-mus"><b>Trabaja:</b> dorsal ancho <em>· apoyo: redondo mayor, trapecio inferior, bíceps</em></p>
+          <div class="ac-dose"><div><span>SERIES</span><b>4</b></div><div><span>REPETICIONES</span><b>6-10</b></div></div>
+        </div>
+      </div>
+      <div class="ac-how">
+        <p><span class="k k-ini">INICIO</span>Colgado, agarre más abierto que los hombros, abdomen activo.</p>
+        <p><span class="k k-fin">FINAL</span>Barbilla por encima de la barra, pecho cerca de ella.</p>
+        <p><span class="k k-inh">INHALA</span>Al bajar controlado. <span class="k k-exh">EXHALA</span>Al subir.</p>
+        <p><span class="k k-ev">EVITA</span>Balancearte, medias repeticiones o soltarte de golpe.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ========== QUÉ INCLUYE (bento) ========== -->
+<section class="bento-sec section" id="incluye">
+  <div class="wrap">
+    <p class="kicker reveal">Qué incluye</p>
+    <h2 class="h2 reveal">Todo para entregar <span class="hl">como un pro</span>.</h2>
+    <div class="bento">
+      <article class="tile t-big spot reveal">
+        <div class="t-gifs"><img src="assets/img/sentadilla_barra.webp" alt="" loading="lazy"><img src="assets/img/burpees.webp" alt="" loading="lazy"><img src="assets/img/elev_laterales.webp" alt="" loading="lazy"><img src="assets/img/muscle_up.webp" alt="" loading="lazy"></div>
+        <h3>90 rutinas listas</h3>
+        <p>Básico, intermedio y avanzado. Rutinas A, B y C consecutivas para pecho, espalda, hombros, brazos, piernas, glúteos, abdominales, estiramientos, HIIT y calistenia.</p>
+      </article>
+      <article class="tile spot reveal"><b class="t-num">174</b><h3>Ejercicios animados</h3><p>Con músculo, inicio, final, respiración y errores a evitar.</p></article>
+      <article class="tile spot reveal"><b class="t-ico">★</b><h3>Tu marca en todo</h3><p>Logo, nombre, WhatsApp e Instagram en rutinas, PDF y planes.</p></article>
+      <article class="tile spot reveal"><b class="t-ico">👥</b><h3>Planes por cliente</h3><p>Guarda el plan de cada alumno y edítalo cuando quieras.</p></article>
+      <article class="tile spot reveal"><b class="t-ico">⇄</b><h3>100% editable</h3><p>Cambia ejercicios, series, repeticiones, descanso y orden.</p></article>
+      <article class="tile t-wide spot reveal">
+        <div class="t-sets"><i class="ok">1</i><i class="ok">2</i><i>3</i><i>4</i></div>
+        <h3>Tu alumno marca sus series</h3>
+        <p>El archivo que recibe guarda su progreso en el celular. Sin apps, sin cuentas, sin instalar nada.</p>
+      </article>
+      <article class="tile spot reveal"><b class="t-ico">🖨</b><h3>PDF en un clic</h3><p>De una rutina o del plan completo.</p></article>
+      <article class="tile spot reveal"><b class="t-ico">⚡</b><h3>Funciona sin internet</h3><p>Se abre con doble clic en tu computadora.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COMPARATIVA ========== -->
+<section class="compare section">
+  <div class="wrap">
+    <p class="kicker reveal">Comparativa</p>
+    <h2 class="h2 reveal">No es un pack de GIFs.<br>Es <span class="hl">Trainova</span>.</h2>
+    <div class="table-wrap reveal">
+      <table class="cmp">
+        <thead><tr><th></th><th>Pack de GIFs</th><th>Plantillas de Canva</th><th class="me">Trainova</th></tr></thead>
+        <tbody>
+          <tr><td>Animación de cada ejercicio</td><td class="y">✓</td><td class="y">✓</td><td class="me y">✓</td></tr>
+          <tr><td>Rutinas armadas por nivel</td><td class="n">—</td><td class="p">Algunas</td><td class="me y">90</td></tr>
+          <tr><td>Inicio, final, respiración y qué evitar</td><td class="n">—</td><td class="n">—</td><td class="me y">✓</td></tr>
+          <tr><td>Planes guardados por cliente</td><td class="n">—</td><td class="n">—</td><td class="me y">✓</td></tr>
+          <tr><td>Tu marca automática</td><td class="n">—</td><td class="p">Manual</td><td class="me y">✓</td></tr>
+          <tr><td>Tu alumno marca sus series</td><td class="n">—</td><td class="n">—</td><td class="me y">✓</td></tr>
+          <tr><td>Tiempo para armar un plan</td><td class="n">Horas</td><td class="p">30–60 min</td><td class="me y">Minutos</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PARA QUIÉN ========== -->
+<section class="who section">
+  <div class="wrap who-grid">
+    <article class="who-card reveal"><span>🏋️</span><h3>Entrenador presencial</h3><p>Deja de repetir la misma explicación en cada sesión. Tu alumno llega sabiendo qué hacer.</p></article>
+    <article class="who-card reveal"><span>📱</span><h3>Coach online</h3><p>Entrega planes que se ven y se sienten como una app propia, con tu marca.</p></article>
+    <article class="who-card reveal"><span>🏢</span><h3>Gimnasio o estudio</h3><p>Un mismo estándar profesional para todos tus entrenadores y socios.</p></article>
+  </div>
+</section>
+
+<!-- ========== PRECIO ========== -->
+<section class="price section" id="precio">
+  <div class="wrap">
+    <p class="kicker reveal center">Acceso completo</p>
+    <h2 class="h2 reveal center">Un pago. <span class="hl">Para siempre.</span></h2>
+    <article class="price-card tilt reveal">
+      <div class="pc-glow" aria-hidden="true"></div>
+      <span class="pc-tag">TRAINOVA · LICENCIA PARA ENTRENADOR</span>
+      <ul class="pc-list">
+        <li>App de plantillas dinámicas (Windows y Mac)</li>
+        <li>90 rutinas: 3 niveles × A, B y C × 10 grupos</li>
+        <li>174 ejercicios animados con instrucciones completas</li>
+        <li>Planes por cliente y archivo para su celular</li>
+        <li>Tu marca en rutinas, PDF y planes</li>
+        <li>Guía “Empieza aquí” paso a paso</li>
+        <li>Actualizaciones futuras incluidas</li>
+      </ul>
+      <div class="pc-offer" data-offer-box>
+        <span class="pc-offer-t">La oferta de lanzamiento termina en</span>
+        <div class="countdown big" data-countdown>
+          <div><b data-cd="h">48</b><span>horas</span></div><i>:</i>
+          <div><b data-cd="m">00</b><span>min</span></div><i>:</i>
+          <div><b data-cd="s">00</b><span>seg</span></div>
+        </div>
+      </div>
+      <div class="pc-price">
+        <span class="pc-old"><s><span data-price-old>47</span> <span data-currency>USD</span></s></span>
+        <span class="pc-now"><b data-price>17</b><small data-currency>USD</small></span>
+        <span class="pc-note">Pago único · sin mensualidades</span>
+      </div>
+      <a class="btn btn-gold btn-xl magnetic" href="#precio" data-checkout>Quiero acceder <span aria-hidden="true">→</span></a>
+      <p class="pc-secure">Pago seguro con Hotmart · Acceso inmediato a tu correo</p>
+    </article>
+
+    <div class="guarantee reveal">
+      <div class="g-seal"><b>7</b><span>DÍAS</span></div>
+      <div><h3>Garantía de 7 días</h3><p>Pruébalo con tus clientes. Si no es para ti, pides el reembolso desde Hotmart dentro de los 7 días y te devuelven el 100%.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="faq section" id="faq">
+  <div class="wrap narrow">
+    <p class="kicker reveal center">Preguntas frecuentes</p>
+    <h2 class="h2 reveal center">Antes de entrar al <span class="hl">ring</span>.</h2>
+    <div class="faq-list">
+      <details class="reveal"><summary>¿Cómo recibo el sistema?</summary><p>Después del pago, Hotmart te envía un correo con el enlace de descarga. Descomprimes el archivo y abres <b>index.html</b> con doble clic. Incluye una guía “Empieza aquí”.</p></details>
+      <details class="reveal"><summary>¿Necesito instalar algo o saber de computación?</summary><p>No. Funciona en el navegador que ya tienes (Chrome o Edge recomendados), en Windows o Mac, incluso sin internet.</p></details>
+      <details class="reveal"><summary>¿Mi alumno necesita descargar una app?</summary><p>No. Recibe un archivo por WhatsApp o correo y lo abre en su celular. Ve las animaciones, las instrucciones y marca sus series.</p></details>
+      <details class="reveal"><summary>¿Puedo cambiar los ejercicios y las series?</summary><p>Sí. Cambias cualquier ejercicio por otro de los 174, ajustas series, repeticiones y descanso, reordenas y añades ejercicios.</p></details>
+      <details class="reveal"><summary>¿Funciona en el celular del entrenador?</summary><p>El panel para armar planes está pensado para computadora o tablet. Los planes que recibe tu alumno están pensados para el celular.</p></details>
+      <details class="reveal"><summary>¿Tiene mensualidades?</summary><p>No. Es un pago único, con acceso para siempre y actualizaciones incluidas.</p></details>
+      <details class="reveal"><summary>¿Dónde se guardan mis clientes?</summary><p>En tu computadora, dentro del navegador. Con el botón “Respaldo” descargas una copia para guardarla en tu nube o pasarla a otro equipo.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA FINAL ========== -->
+<section class="final section">
+  <div class="final-fx" aria-hidden="true"></div>
+  <div class="wrap center">
+    <p class="final-round reveal">ROUND 1</p>
+    <h2 class="final-title reveal">Tu próximo alumno<br>merece un plan <span class="hl">así</span>.</h2>
+    <a class="btn btn-gold btn-xl magnetic reveal" href="#precio" data-checkout>Quiero acceder <span aria-hidden="true">→</span></a>
+    <p class="final-sub reveal">Pago único · Acceso inmediato · Garantía de 7 días</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="nav-logo">TRAIN<b>OVA</b></div>
+    <p class="foot-contact" id="footContact"></p>
+    <p class="foot-legal">© 2026 Trainova. Producto digital. Las rutinas son una guía general y no sustituyen la valoración de un profesional de la salud.</p>
+  </div>
+</footer>
+
+<!-- ========== BARRA DE OFERTA ========== -->
+<aside class="offer-bar" id="offerBar" aria-label="Oferta de lanzamiento">
+  <div class="ob-info">
+    <span class="ob-tag">🔥 OFERTA DE LANZAMIENTO</span>
+    <span class="ob-price">De <s><span data-price-old>47</span></s> a <b><span data-price>17</span> <span data-currency>USD</span></b> · pago único</span>
+  </div>
+  <div class="countdown" data-countdown aria-live="off">
+    <div><b data-cd="h">48</b><span>horas</span></div><i>:</i>
+    <div><b data-cd="m">00</b><span>min</span></div><i>:</i>
+    <div><b data-cd="s">00</b><span>seg</span></div>
+  </div>
+  <a class="btn btn-gold ob-btn magnetic" href="#precio" data-checkout>Aprovechar oferta</a>
+</aside>
+
+<script defer src="lib/gsap.min.js"></script>
+<script defer src="lib/ScrollTrigger.min.js"></script>
+<script defer src="lib/manifest.js?v=20261026e"></script>
+<script defer src="lib/demo-data.js?v=20261026e"></script>
+<script defer src="main.js?v=20261026e"></script>
+</body>
+</html>
